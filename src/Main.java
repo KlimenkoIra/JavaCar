@@ -1,6 +1,7 @@
 import com.example.car.Car;
 import com.example.car.CarArray;
 import com.example.car.FactoryCarArray;
+import com.example.car.Search;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,6 +16,9 @@ public class Main {
         array.setElement(2, car3);
 
         System.out.println(array);
-        //TODO: add search test
+
+        Search.searchCarForModel(array.getArr(),"X5");
+        Search.searchCarForModelWithExecution(array.getArr(),"Sport SVR", 1);
+        Search.searchCarForYearAndCost(array.getArr(), 2020, 500000);
     }
 }
